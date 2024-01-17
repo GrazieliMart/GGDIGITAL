@@ -1,0 +1,741 @@
+
+form {
+
+padding: 60px;
+width: 700px;
+border-radius: 8px;
+
+}input, select {
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 2px #ffffff3d solid;
+  background: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff; /* Definir a cor do texto para preto */
+  caret-color: #ffffff; /* Definir a cor do cursor de digitação para preto */
+}
+
+.form-contato textarea{
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 2px #ffffff3d solid;
+  background: center;
+  border-radius: 10px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff; /* Definir a cor do texto para preto */
+  caret-color: #ffffff; /* Definir a cor do cursor de digitação para preto */
+
+}
+textarea:hover {
+  border: 2px #ffffff solid;
+  background-color: #293541;
+  transition: 0.3s;
+}
+input:hover {
+  border: 2px #ffffff solid;
+  background-color: #293541;
+  transition: 0.3s;
+}
+
+select:hover {
+  border: 3px #ffffff solid;
+  background-color: #293541;
+  transition: 0.3s;
+}
+
+/* Adicionar regras de estilo para desativar o preenchimento automático */
+input:-internal-autofill-selected,
+input:-internal-autofill-previewed,
+input:-internal-autofill-previewed:hover,
+input:-internal-autofill-selected:hover {
+  -webkit-box-shadow: 0 0 0 1000px #293541 inset !important; /* Adicionar sombra para cobrir o texto salvo no navegador */
+}
+
+/* Para Firefox */
+input:-moz-placeholder {
+  color: #000 !important;
+}
+
+/* Para Firefox - Modo de navegação privada */
+input:-moz-placeholder:empty {
+  color: #000 !important;
+}
+
+/* Adicionar regras de estilo para desativar o preenchimento automático para selects */
+select:-internal-autofill-selected,
+select:-internal-autofill-previewed,
+select:-internal-autofill-previewed:hover,
+select:-internal-autofill-selected:hover {
+  -webkit-box-shadow: 0 0 0 1000px #293541 inset !important;
+}
+.next {
+    background-color: #1c2833;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 20px;
+    width: 120px;
+}
+.next:hover{
+    transform: scale(1.1); 
+    background-color: #32475a;
+    transition: 0.3s;
+}
+ .back{
+    background-color: #0f151b;
+color: #fff;
+padding: 10px;
+font-size: 17px;
+border: none;
+font-weight: bold;
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+width: 100px;
+
+}
+.align-btn{
+    text-align: center;
+}
+.back:hover{
+
+background-color: #07090c;
+transition: 0.3s;
+
+}
+.form-contato{
+justify-content: center;
+align-items: center;
+padding-bottom: 50px;
+display: flex;
+}
+.btn-top{
+   
+        border-radius: 50px;
+        padding: 10px;
+        background-color: #19dfff;
+        box-shadow: none;
+        font-weight: bold;
+        font-size: 18px;
+        width: 300px;
+        padding: 15px;
+        transition: 0.3s;
+      
+        color: #000;
+        margin-bottom: 10px;
+        border: none;
+        cursor: pointer;
+    }
+   
+ .btn-top:hover{
+        color: #fff;
+        font-size: 18px;
+        transform: scale(1.1); 
+        padding: 15px;
+        transition: 0.3s;
+    }
+.form-contato label{
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    transition: color 0.1s ease-in-out;
+}
+
+
+.form-container {
+    position: relative;
+}
+
+.progress-bar {
+    width: 0;
+    height: 10px;
+    background-color: #19dfff;
+    transition: width 0.3s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+form::placeholder {
+    color: #55555575;
+    font-weight: bold;
+}
+.additional-info {
+    display: flex;
+    justify-content: center; /* Ajuste o espaçamento conforme necessário */
+    margin-top: 5px; /* Ajuste a margem conforme necessário */
+}
+
+.left-box, .right-box {
+   margin-right: 100px;
+}
+.left-box{
+    width: 300px;
+}
+.left-box h1{
+    color: #fff;
+}
+.left-box p{
+    color:#fff;
+}
+.right-box{
+    padding-left: 0%;
+    padding-top: 7%;
+}
+.additional-info img {
+    width: 250px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+.my-image1-container {
+    flex-shrink: 0;
+     margin-right: 100px; 
+}
+.left-box input, .right-box input {
+    width: 100%;
+}
+/* This is an example, feel free to delete this code */
+.tooltip-container {
+    background: rgb(3, 169, 244);
+    background: linear-gradient(
+      138deg,
+      rgba(3, 169, 244, 1) 15%,
+      rgba(63, 180, 233, 1) 65%
+    );
+    position: relative;
+    cursor: pointer;
+    font-size: 17px;
+    padding: 0.7em 0.7em;
+    border-radius: 50px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  .tooltip-container:hover {
+    background: #fff;
+    transition: all 0.6s;
+  }
+  .tooltip-container .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: #fff;
+    transition: all 0.2s;
+  }
+  .tooltip-container:hover .text {
+    fill: rgb(3, 169, 244);
+    transition: all 0.6s;
+  }
+  
+  /* Inicio do tooltip twitter */
+  .tooltip1 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    fill: #03a9f4;
+    padding: 10px;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip-container:hover .tooltip1 {
+    top: 150%;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    border-radius: 50px;
+    transform: translate(-50%, -5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tooltip-container:hover .tooltip1:hover {
+    background: #03a9f4;
+    fill: #fff;
+  }
+  /* Fim do tooltip twitter */
+  
+  /* Inicio do tooltip facebook */
+  .tooltip2 {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    fill: #0462df;
+    padding: 10px;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip-container:hover .tooltip2 {
+    top: -120%;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    transform: translate(-50%, -5px);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c42c2c;
+  }
+  
+  .tooltip-container:hover .tooltip2:hover {
+    background: #c42c2c;
+    fill: #fff;
+    color: #fff;
+  }
+  /* Fim do tooltip facebook */
+  
+  /* Inicio do tooltip whatsApp */
+  .tooltip3 {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    transform: translateX(80%);
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    fill: #1db954;
+    padding: 10px;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip-container:hover .tooltip3 {
+    top: 10%;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    transform: translate(85%, -5px);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tooltip-container:hover .tooltip3:hover {
+    background: #1db954;
+    fill: #fff;
+  }
+  /* Fim do tooltip whatsApp */
+  
+  /* Inicio do tooltip Discord */
+  .tooltip4 {
+    position: absolute;
+    top: 100%;
+    left: -190%;
+    transform: translateX(70%);
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    fill: #8c9eff;
+    padding: 10px;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip-container:hover .tooltip4 {
+    top: 10%;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    transform: translate(70%, -5px);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    color: #d18cff;
+    justify-content: center;
+  }
+  .tooltip-container:hover .tooltip4:hover {
+    background: #d18cff;
+    fill: #fff;
+    color: #fff;
+  }
+  /* Fim do tooltip Discord */
+  
+  /* Inicio do tooltip pinterest */
+  .tooltip5 {
+    position: absolute;
+    top: 100%;
+    left: -145%;
+    transform: translateX(70%);
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    fill: #bd081c;
+    color: #0462df;
+    padding: 10px;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip-container:hover .tooltip5 {
+    top: -78%;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    transform: translate(70%, -5px);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tooltip-container:hover .tooltip5:hover {
+    background: #0462df;
+    color: #fff;
+    fill: #fff;
+  }
+  /* Fim do tooltip pinterest */
+  
+  /* Inicio do tooltip dribbble */
+  .tooltip6 {
+    position: absolute;
+    top: 100%;
+    left: 35%;
+    transform: translateX(70%);
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    fill: #ea4c89;
+    color: #19dfff;
+    padding: 10px;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip-container:hover .tooltip6 {
+    top: -79%;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    transform: translate(70%, -5px);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tooltip-container:hover .tooltip6:hover {
+    background: #19dfff;
+    fill: #fff;
+    color: #fff;
+  }
+  /* Fim do tooltip dribbble */
+  
+  /* Inicio do tooltip github */
+  .tooltip7 {
+    position: absolute;
+    top: 100%;
+    left: 39%;
+    transform: translateX(70%);
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    fill: #000;
+    padding: 10px;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip-container:hover .tooltip7 {
+    top: 104%;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    transform: translate(70%, -5px);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tooltip-container:hover .tooltip7:hover {
+    background: #000;
+    fill: #fff;
+  }
+  /* Fim do tooltip github */
+  
+  /* Inicio do tooltip reddit */
+  .tooltip8 {
+    position: absolute;
+    top: 100%;
+    left: -150%;
+    transform: translateX(70%);
+    opacity: 0;
+    visibility: hidden;
+    background: #fff;
+    fill: #ff4500;
+    padding: 10px;
+    border-radius: 50px;
+    transition: opacity 0.3s, visibility 0.3s, top 0.3s, background 0.3s;
+    z-index: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tooltip-container:hover .tooltip8 {
+    top: 101%;
+    opacity: 1;
+    visibility: visible;
+    background: #fff;
+    transform: translate(70%, -5px);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .tooltip-container:hover .tooltip8:hover {
+    background: #ff4500;
+    fill: #fff;
+  }
+  /* Fim do tooltip reddit */
+  
+  /* Inicio do tooltip fixo */
+  .tooltip9 {
+    position: absolute;
+    top: 0;
+    left: -115%;
+    opacity: 0;
+    visibility: hidden;
+    width: 150px;
+    height: 150px;
+    z-index: -1;
+  }
+  
+  .tooltip-container:hover .tooltip9 {
+    top: -110%;
+    opacity: 1;
+    visibility: visible;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  /* Fim do tooltip fixo */
+  /* Por meio desse ultimo tooltip todos os outros podem
+  ficar fixos quando houver no principal, para vê-lo dê um
+  background black acima*/
+  
+ @media screen and (max-width: 1040px) {
+  #nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px; /* Ajuste conforme necessário */
+    left: 0;
+    background-color: #28313A; /* Ajuste conforme necessário */
+    width: 100%;
+    text-align: center;
+  }
+  form {
+    padding: 60px;
+    width: 380px;
+    border-radius: 8px;
+}
+.texto-entrada-contato {
+  color: #fff;
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 150px;
+}
+   nav a{
+   color: #19dfff;
+   DISPLAY: NONE;
+}
+  .link-a {
+    padding: 15px;
+    color: #fff; /* Ajuste conforme necessário */
+    text-decoration: none;
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    cursor: pointer;
+    margin-left: auto;
+    margin-top: 10px; /* Ajuste conforme necessário */
+  }
+  /* Add this to your existing CSS */
+.mobile-menu-icon {
+   display: flex;
+   flex-direction: column;
+   cursor: pointer;
+   margin-left: 15px; /* Adjust as needed */
+ }
+ 
+ .bar {
+   width: 30px;
+   height: 3px;
+   background-color: #fff; /* Adjust as needed */
+   margin: 6px 0;
+ }
+ .mobile-nav {
+   display: flex;
+   flex-direction: column;
+   position: absolute;
+   top: 70px;
+   left: 0;
+   background-color: #28313a;
+   width: 100%;
+   text-align: left;
+}
+
+.mobile-nav a {
+   color: #19dfff;
+   padding: 15px;
+   text-decoration: none;
+   display: block;
+}
+.footer-content {
+    display: block; 
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+}
+.footer-right .column {
+   DISPLAY: NONE;
+}
+.footer-content button{
+   DISPLAY: NONE;
+}
+.my-container {
+   display: block;
+   align-items: center;
+   margin-bottom: 50px;
+   padding-left: 20px;
+   margin-top: 50px;
+   justify-content: center;
+}
+.my-text-container {
+   max-width: 368px;
+}
+.my-container img {
+   width: 137px;
+}
+.conteudo-acima {
+   padding-top: 50px;
+   padding-right: 150px;
+   display: none;
+   padding-left: 150px;
+}
+.left-div video{
+   height: 450px;
+   width: 400px;
+}
+.left-div{
+   padding-left: 0px;
+}
+.texto-baixo {
+    display: block; 
+    
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   margin-top: 20px;
+}
+.texto-div {
+   text-align: center;
+   width: 400px;
+   padding: 10px;
+   padding-bottom: 50px;
+}
+.texto-metodologia img{
+display: none;
+}
+.faixa-imagens-container{
+   display: none;
+}
+.empresa img {
+   width: 199px;
+   height: 80px;
+   transition: transform 0.5s;
+}
+.texto-empresas h1 {
+   font-size: 25px;
+   font-family: 'Roboto', sans-serif;
+   font-weight: bold;
+   color: #fff;
+   padding: 30px;
+}
+.container-custom {
+    display: block; 
+   justify-content: space-between;
+   align-items: center;
+    width: 100%; 
+    padding-right:0px; 
+    padding-left: 0px; 
+    padding-bottom: 0px;
+   justify-content: center;
+   padding-top: 15px;
+}
+.video-section {
+   position: relative;
+   width: 376px;
+   /* height: 650px; */
+   /* overflow: hidden; */
+}
+.empresa p {
+  display: none;
+}
+.texto-entrada-contato {
+  color: #fff;
+  text-align: center;
+  padding-left: 0px;
+  padding-right: 0px;
+  padding-top: 150px;
+}
+.texto-entrada-contato h1 {
+  font-size: 20px;
+}
+
+.left-box, .right-box {
+   margin-right: 0px; 
+}
+.additional-info img {
+  width: 250px;
+  display: none;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+.my-image1-container {
+  flex-shrink: 0;
+   margin-right: 0px; 
+}
+.additional-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 100px;
+}
+.left-box{
+  width: 256px;
+}
+.right-box {
+  padding-left: 0%;
+  padding-top: 15%;
+}
+}
