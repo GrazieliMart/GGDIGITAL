@@ -152,8 +152,76 @@ button:hover{
         <p>Integramos sistemas de CRM para fortalecer o relacionamento com o cliente. Personalizamos abordagens, melhoramos a retenção e impulsionamos a satisfação do cliente de forma holística.</p>
     </div>
 </div>
+<img src="form.png" alt="Imagem" style="max-width: 100%;" id="mobile-img">
+<div class="form-contact-top">
+    <div class="form-left">
+        <!-- Aqui você pode substituir o caminho da imagem pela sua própria imagem -->
+        <img src="form.png" alt="Imagem" style="max-width: 100%;">
+    </div>
+    <div class="form-right">
+        <form method="POST" action="https://api.sheetmonkey.io/form/hL6n83tH36nZw27n3qyuH2" >
+          
+            <input type="text" id="nome" name="nome" required placeholder="Qual seu nome?"><br><br>
+    
+           
+            <input type="email" id="email" name="email" required placeholder="Digite o seu e-mail"><br><br>
+    
+            
+            <input type="tel" id="telefone" name="telefone" required placeholder="Telefone para contato"><br><br>
+    
+          
+            <input type="text" id="nome_empresa" name="nome_empresa" required placeholder="Qual seu o nome da sua empresa?"><br><br>
+    
+           
+            <select id="faturamento_mensal" name="faturamento_mensal" required>
+                <option value="" disabled selected>Qual o seu investimento da sua empresa?</option>
+                <option value="Até 5 mil">Até 5 mil</option>
+                <option value="De R$5.000 até R$10.000">De R$5.000 até R$10.000</option>
+                <option value="De R$10.000 até R$20.000">De R$10.000 até R$20.000</option>
+                <option value="De R$20.000 até R$30.000">De R$20.000 até R$30.000</option>
+                <option value="De R$30.000 até R$50.000">De R$30.000 até R$50.000</option>
+5                  <option value="De R$50.000 até R$100.000">De R$50.000 até R$100.000</option>
+                <option value="Mais de R$ 100.000">Mais de R$ 100.000</option>
+            </select><br><br>
+    
+          
+            <select id="segmento_empresa" name="segmento_empresa" required>
+                <option value="" disabled selected>Qual o seu segmento?</option>
+                <option value="Imobiliária">Imobiliária</option>
+                <option value="Provedor de Internet">Provedor de Internet</option>
+                <option value="Streaming">Streaming</option>
+                <option value="E-Commerce">E-Commerce</option>
+                <option value="Franquia">Franquia</option>
+                <option value="Serviço">Serviço</option>
+                <option value="Educação">Educação</option>
+                <option value="Outro">Outro</option>
+            </select><br>
+            <label for="outro_segmento" id="label_outro_segmento" style="display: none;">Especificar:</label><br>
+            <input type="text" id="outro_segmento" name="outro_segmento" style="display: none;"><br><br>
+    
+            <button type="submit" class="btn-form1">Enviar</button>
+        </form>
+    </div>
+</div>
+    <script>
+        document.getElementById('segmento_empresa').addEventListener('change', function() {
+            var select = document.getElementById('segmento_empresa');
+            var selectedOption = select.options[select.selectedIndex].value;
+            if (selectedOption === 'Outro') {
+                document.getElementById('label_outro_segmento').style.display = 'block';
+                document.getElementById('outro_segmento').style.display = 'block';
+                document.getElementById('outro_segmento').setAttribute('required', 'true');
+            } else {
+                document.getElementById('label_outro_segmento').style.display = 'none';
+                document.getElementById('outro_segmento').style.display = 'none';
+                document.getElementById('outro_segmento').removeAttribute('required');
+            }
+        });
+    </script>
+</body>
+</html>
 
-
+</div>
 <div class="texto-empresas" >
     <h1>Essas empresas decidiram investir em Tráfego Pago com a GG. </h1>
     <div class="grupo-divs">
@@ -398,6 +466,37 @@ button:hover{
 
         </div>
   </footer>
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('formcnt');
+
+    form.addEventListener('submit', function(event) {
+        // Impedir o envio padrão do formulário
+        event.preventDefault();
+
+        // Verificar se todos os campos estão preenchidos
+        if (isFormComplete()) {
+            // Se o formulário estiver completo, redirecione para loader.html
+            window.location.href = 'loader.html';
+        } else {
+            // Se o formulário não estiver completo, exiba uma mensagem de erro ou tome outra ação adequada
+            alert('Por favor, preencha todos os campos do formulário.');
+        }
+    });
+
+    function isFormComplete() {
+        // Verificar se todos os campos do formulário estão preenchidos
+        const formElements = form.querySelectorAll('input, select, textarea');
+        for (let i = 0; i < formElements.length; i++) {
+            const element = formElements[i];
+            if (element.required && !element.value.trim()) {
+                // Se algum campo obrigatório estiver vazio, retornar falso
+                return false;
+            }
+        }
+        // Se todos os campos obrigatórios estiverem preenchidos, retornar verdadeiro
+        return true;
+    }
+});</script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
         const mobileMenuIcon = document.querySelector('.mobile-menu-icon');

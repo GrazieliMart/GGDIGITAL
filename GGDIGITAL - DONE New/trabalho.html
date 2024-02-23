@@ -180,6 +180,38 @@
   </footer>
 
 
+   
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('trabalheConoscoForm');
+
+    form.addEventListener('submit', function(event) {
+        // Impedir o envio padrão do formulário
+        event.preventDefault();
+
+        // Verificar se todos os campos estão preenchidos
+        if (isFormComplete()) {
+            // Se o formulário estiver completo, redirecione para loader.html
+            window.location.href = 'loader2.html';
+        } else {
+            // Se o formulário não estiver completo, exiba uma mensagem de erro ou tome outra ação adequada
+            alert('Por favor, preencha todos os campos do formulário.');
+        }
+    });
+
+    function isFormComplete() {
+        // Verificar se todos os campos do formulário estão preenchidos
+        const formElements = form.querySelectorAll('input, select, textarea');
+        for (let i = 0; i < formElements.length; i++) {
+            const element = formElements[i];
+            if (element.required && !element.value.trim()) {
+                // Se algum campo obrigatório estiver vazio, retornar falso
+                return false;
+            }
+        }
+        // Se todos os campos obrigatórios estiverem preenchidos, retornar verdadeiro
+        return true;
+    }
+});</script>
     <script>
         function proximoForm(numero) {
             document.getElementById('form' + numero).style.display = 'block';
@@ -201,73 +233,9 @@
             progressBar.style.width = `${larguraAtual}%`;
         }
 
-        function validarFormulario(numeroFormulario) {
-            const formulario = document.getElementById('form' + numeroFormulario);
-
-            for (let i = 0; i < formulario.elements.length; i++) {
-                if (formulario.elements[i].type !== 'button' && formulario.elements[i].type !== 'submit') {
-                    if (formulario.elements[i].value === '' && formulario.elements[i].name !== 'website') {
-                        alert('Por favor, preencha todos os campos obrigatórios antes de prosseguir.');
-                        return false;
-                    }
-                }
-            }
-
-            // Verificar se todos os formulários foram preenchidos antes de enviar
-            if (numeroFormulario === 3) {
-                // Adicione aqui a lógica de envio do formulário se necessário
-                // Redirecionar para a página de parabéns
-                window.location.href = 'trabalhoForm.php';
-            } else {
-                // Se não for o último formulário, apenas atualize o progresso
-                proximoForm(numeroFormulario + 1);
-            }
-
-            return false;
-        }
+     
     </script>
     
-  
-    <script>
-        function proximoForm(numero) {
-            document.getElementById('form' + numero).style.display = 'block';
-            document.getElementById('form' + (numero - 1)).style.display = 'none';
-            atualizarProgressBar(numero);
-        }
-
-        function voltarForm(numero) {
-            document.getElementById('form' + numero).style.display = 'block';
-            document.getElementById('form' + (numero + 1)).style.display = 'none';
-            atualizarProgressBar(numero);
-        }
-
-        function atualizarProgressBar(numeroFormulario) {
-            const progressBar = document.getElementById('progressBar');
-            const totalFormularios = 3; // Total de formulários no seu caso
-
-            const larguraAtual = (numeroFormulario / totalFormularios) * 100;
-            progressBar.style.width = `${larguraAtual}%`;
-        }
-
-      
-        function validarFormulario(numeroFormulario) {
-            const formulario = document.getElementById('form' + numeroFormulario);
-
-            for (let i = 0; i < formulario.elements.length; i++) {
-                if (formulario.elements[i].type !== 'button' && formulario.elements[i].type !== 'submit') {
-                    if (formulario.elements[i].value === '' && formulario.elements[i].name !== 'website') {
-                        alert('Por favor, preencha todos os campos obrigatórios antes de prosseguir.');
-                        return false;
-                    }
-                }
-            }
-
-            // Exibir loader
-            window.location.href = 'loader.php';
-
-            return false;
-        }
-    </script>
      <script>
     document.querySelector('.button').addEventListener('click', function() {
         const scrollToTop = () => {

@@ -13,6 +13,42 @@ progress {
     display: none;
     overflow: hidden;
 }
+
+        .form-contact-top {
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-contact-top form {
+            border: 2px solid white;
+            border-radius: 20px;
+            width: 469px;
+            padding: 50px;
+        }
+        .form-contact-top form input{
+            border-radius: 10px;
+            padding: 18px;
+            width: 428px;
+
+        }
+        .form-contact-top form select {
+            border-radius: 10px;
+            padding: 10px;
+            width: 470px;
+        }
+        .btn-form1{
+            background-color: #17D5ff;
+        }
+        .form-left {
+            flex: 1;
+            display: flex;
+            width: 413px;
+            margin-right: 94px;
+            justify-content: right;
+        }
+        .form-right {
+            flex: 1;
+            text-align: center;
+        }
 #topo a.current {
     color: #19dfff; 
 }
@@ -763,20 +799,22 @@ video {
     justify-content: center;
     padding-top: 100px;
 }
-.container-custom h1{
+.container-custom h1 {
     color: #fff;
-}
-.container-custom p{
-    color: #fff;
-}
-.column-custom {
-   
-    text-align: center;
-    padding: 50px;
+    font-size: 17px;
 }
 
+.container-custom p {
+    color: #fff;
+    font-size: 13px;
+}
+.column-custom {
+    text-align: center;
+    padding: 38px;
+    padding-top: 36px;
+}
 .column-custom img {
-  width: 250px;
+    width: 195px;
     height: auto;
     border-radius: 50%;
 }
@@ -853,7 +891,9 @@ video {
 .mobile-menu, .mobile-nav{
     display: none;
 }
-
+#mobile-img{
+    display: none;
+}
 
  @media screen and (max-width: 1400px) {
  
@@ -865,6 +905,42 @@ video {
         width: 295px;
         border-radius: 8px;
     }
+    .form-right {
+        flex: 1;
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+    #mobile-img{
+        display: flex;
+    }
+    .form-left {
+        flex: 1;
+        display: none;
+        width: 413px;
+        margin-right: 94px;
+        justify-content: right;
+    }
+    .form-contact-top form {
+        border: 2px solid white;
+        border-radius: 20px;
+        width: 229px;
+        padding: 37px;
+    }
+    .form-contact-top form input {
+        border-radius: 10px;
+        padding: 18px;
+        width: 196px;
+    }
+    .form-contact-top form select {
+        border-radius: 10px;
+        padding: 10px;
+        width: 233px;
+    }
+    .form-contact-top .btn-form1{
+        width: 233px;
+    }
+    
     .vertical-menu {
         padding: 10px;
         display: flex;

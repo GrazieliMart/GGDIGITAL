@@ -30,9 +30,7 @@
 }
     </style>
 </head>
-<?php
-$current_page = basename($_SERVER['PHP_SELF']);
-?>
+
 <header>
 <body>
     <div id="progressBarTop" class="progress-bar" style="width: 0;"></div>
@@ -299,6 +297,37 @@ $current_page = basename($_SERVER['PHP_SELF']);
 
         </div>
   </footer>
+  <script>document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function(event) {
+        // Impedir o envio padrão do formulário
+        event.preventDefault();
+
+        // Verificar se todos os campos estão preenchidos
+        if (isFormComplete()) {
+            // Se o formulário estiver completo, redirecione para loader.html
+            window.location.href = 'loader.html';
+        } else {
+            // Se o formulário não estiver completo, exiba uma mensagem de erro ou tome outra ação adequada
+            alert('Por favor, preencha todos os campos do formulário.');
+        }
+    });
+
+    function isFormComplete() {
+        // Verificar se todos os campos do formulário estão preenchidos
+        const formElements = form.querySelectorAll('input, select, textarea');
+        for (let i = 0; i < formElements.length; i++) {
+            const element = formElements[i];
+            if (element.required && !element.value.trim()) {
+                // Se algum campo obrigatório estiver vazio, retornar falso
+                return false;
+            }
+        }
+        // Se todos os campos obrigatórios estiverem preenchidos, retornar verdadeiro
+        return true;
+    }
+});</script>
   <script>
     function atualizarProgressBar() {
         const formElements = document.querySelectorAll('#contactForm input, #contactForm select, #contactForm textarea');
