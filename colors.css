@@ -900,6 +900,7 @@ video {
     .texto-entrada-contato h1 {
         font-size: 20px;
     }
+
     form {
         padding: 60px;
         width: 295px;
@@ -1105,7 +1106,7 @@ display: none;
 }
 .video-section {
     position: relative;
-    width: 395px;
+    width: 290px;
     /* height: 650px; */
     /* overflow: hidden; */
 }
