@@ -70,18 +70,17 @@ button:hover{
     <a href="index.html">Home</a>
    
     <a href="sobre.html">Sobre nós</a>
-    <a href="contato.html">Contato</a>
-    <a href="trabalho.html">Trabalhe Conosco</a>
+    <a href="contato.html" id="contato">Contato</a>
+ 
 </div>
         <img id="logo" src="logo1.png" alt="Logo">
         <a href="index.html"  >Home</a>
      
         <a href="sobre.html" >Sobre nós</a>
         <a href="contato.html">Contato</a>
-        <a href="trabalho.html" >Trabalhe Conosco</a>
         <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="whatsappIconNavBar"> <i class="bi bi-whatsapp"></i></a>
-        <a href="https://typebot.co/my-typebot-do4vkhl" class="link-a">
-        <button class="animated-button" style=" margin-left: 150px;">
+        <a href="https://typebot.co/my-typebot-do4vkhl" class="link-a" id="TypeBotNavBar">
+        <button class="animated-button" style=" margin-left: 200px;">
   <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
     <path
       d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
@@ -209,7 +208,7 @@ button:hover{
             <label for="outro_segmento" id="label_outro_segmento" style="display: none;">Especificar:</label><br>
             <input type="text" id="outro_segmento" name="outro_segmento" style="display: none;"><br><br>
     
-            <button type="submit" class="btn-form1">Enviar</button>
+           <a id="enviarform"><button type="submit" class="btn-form1">Enviar</button></a>
         </form>
     </div>
 </div>
@@ -371,7 +370,7 @@ button:hover{
             </div>
         </div>
         <div class="btn-center">
-        <a href="https://typebot.co/my-typebot-do4vkhl">
+        <a href="https://typebot.co/my-typebot-do4vkhl" id="conhcerbutton">
                     <button class="animated-button">
                         <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -407,7 +406,7 @@ button:hover{
             <div class="right-div">  <img src="icones (9).png" alt="Imagem" > <br>Provedor de Internet</div>
             <div class="right-div">  <img src="icones (2).png" alt="Imagem" > <br>Serviço de Streaming</div>
         </div>
-        <a href="https://typebot.co/my-typebot-do4vkhl">
+        <a href="https://typebot.co/my-typebot-do4vkhl" id="crescerminhaempresa">
             <button class="btn-metodo">QUERO CRESCER MINHA EMPRESA</button>
         </a>
     </div>
@@ -421,7 +420,7 @@ button:hover{
         <div class="my-text-container">
             <h1>Atendimento ao cliente 24hrs</h1>
             <p>Nossa equipe ao cliente está disponível para ajudar 24 horas por dia. Entre em contato agora mesmo via WhatsApp e fale com um consultor.</p>
-            <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" >
+            <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="whatsqueroconhecer">
                     <button class="animated-button">
                         <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"></path>
@@ -446,10 +445,8 @@ button:hover{
 <div class="footer-left">
     <div class="vertical-menu">
         <a href="index.html">Home</a>
-        <a href="vender.html">Quero vender mais</a>
         <a href="sobre.html" >Sobre Nós</a>
-        <a href="contato.html" >Contato</a>
-        <a href="trabalho.html" >Trabalhe Conosco</a>
+        <a href="contato.html" id="contatoFooter">Contato</a>
     </div>
 </div>
           <div class="footer-right">
@@ -488,6 +485,58 @@ button:hover{
           fbq('track', 'Icon Whatsapp NavBar', { currency: "USD", value: 0.00 });
       });
   </script>
+
+
+
+<script type="text/javascript">
+    $('#TypeBotNavBar').click(function () {
+        fbq('track', 'Button TypeBot NavBar', { currency: "USD", value: 0.00 });
+    });
+</script>
+<script type="text/javascript">
+    $('#contato').click(function () {
+        fbq('track', 'Button Contato NavBar', { currency: "USD", value: 0.00 });
+    });
+</script>
+
+<script type="text/javascript">
+    $('#saibaMaisBtn').click(function () {
+        fbq('track', 'Button Saiba Mais Video', { currency: "USD", value: 0.00 });
+    });
+</script>
+
+<script type="text/javascript">
+    $('#enviarform').click(function () {
+        fbq('track', 'Button Enviar do Form', { currency: "USD", value: 0.00 });
+    });
+</script>
+
+<script type="text/javascript">
+    $('#conhcerbutton').click(function () {
+        fbq('track', 'Button Quero Conhecer', { currency: "USD", value: 0.00 });
+    });
+</script>
+
+<script type="text/javascript">
+    $('#querocrescerminhaempresa').click(function () {
+        fbq('track', 'Button Quero Crecer Minha Empresa', { currency: "USD", value: 0.00 });
+    });
+</script>
+
+<script type="text/javascript">
+    $('#whatsqueroconhecer').click(function () {
+        fbq('track', 'Button Quero Conhcer - WhatsApp', { currency: "USD", value: 0.00 });
+    });
+</script>
+
+<script type="text/javascript">
+    $('#contatoFooter').click(function () {
+        fbq('track', 'Button Contato - Footer', { currency: "USD", value: 0.00 });
+    });
+</script>
+
+
+
 
 
 
