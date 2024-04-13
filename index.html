@@ -70,14 +70,14 @@ button:hover{
     <a href="index.html">Home</a>
    
     <a href="sobre.html">Sobre nós</a>
-    <a href="contato.html" id="contato">Contato</a>
+    <a href="contato.html">Contato</a>
  
 </div>
         <img id="logo" src="logo1.png" alt="Logo">
         <a href="index.html"  >Home</a>
      
         <a href="sobre.html" >Sobre nós</a>
-        <a href="contato.html">Contato</a>
+        <a href="contato.html" id="contato">Contato</a>
         <a href="https://api.whatsapp.com/send/?phone=5511989467375&text&type=phone_number&app_absent=0" id="whatsappIconNavBar"> <i class="bi bi-whatsapp"></i></a>
         <a href="https://typebot.co/my-typebot-do4vkhl" class="link-a" id="TypeBotNavBar">
         <button class="animated-button" style=" margin-left: 200px;">
@@ -485,6 +485,12 @@ button:hover{
           fbq('track', 'Icon Whatsapp NavBar', { currency: "USD", value: 0.00 });
       });
   </script>
+    <script type="text/javascript">
+        $('#whatsappIconFooter').click(function () {
+            fbq('track', 'Icon Whatsapp Footer', { currency: "USD", value: 0.00 });
+        });
+    </script>
+  
 
 
 
@@ -518,7 +524,7 @@ button:hover{
 </script>
 
 <script type="text/javascript">
-    $('#querocrescerminhaempresa').click(function () {
+    $('#crescerminhaempresa').click(function () {
         fbq('track', 'Button Quero Crecer Minha Empresa', { currency: "USD", value: 0.00 });
     });
 </script>
